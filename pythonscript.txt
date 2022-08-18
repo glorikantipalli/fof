@@ -1,0 +1,10 @@
+%python
+import os
+file_system=dbutils.widgets.get("file_system")
+filepath=start_date=dbutils.widgets.get("filepath")
+try:
+    dbutils.fs.rm(filepath)
+except FileNotFoundError:
+    print("file not there")
+else:
+    print(filepath+" was deleted")
